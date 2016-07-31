@@ -9,8 +9,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vis/dist/vis.js"></script>
-<script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
-<link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
 <style>
 .navbar {
   margin-bottom: 0;
@@ -31,7 +29,12 @@ body { margin:0; padding:0; }
   margin-left: 15px;
   font-family: helvetica, arial, sans-serif;
 }
-#map { position:absolute; top:150px; bottom:0px; width:100% }
+#table{
+  width:900px,auto;
+  height:400px;
+  margin-left: 15px;
+}
+
 
 /* small screens*/
 @media screen and (max-width: 767px) {
@@ -69,13 +72,11 @@ body { margin:0; padding:0; }
     <p id='p'><br/>Lorem ipsum dolor sit amet, ne eius falli quaestio pro, salutatus evertitur vel eu, dicit audiam ei nam. Graece consetetur voluptatibus an sit, in his aperiri officiis menandri. Vis audiam eruditi oporteat no.
   </p>
 
-<div id='map'></div>
+  <!-- Place this tag where you want the Awesome Table Widget to render -->
+  <div data-type="AwesomeTableView" data-viewID="-KO-Uc_uAUp2x082iCuw"></div>
 
-<script>
-L.mapbox.accessToken = 'pk.eyJ1IjoibWFyaWFjcm9zYXMiLCJhIjoiY2lremc0MnoxMDA3MXd4bTR6dWUyNGw0ZSJ9.9Bk_-nnYE7Xqaz1OXH2fFA';
-L.mapbox.map('map', 'mariacrosas.104nbi89')
-    .addControl(L.mapbox.geocoderControl('mapbox.places'));
-</script>
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script src="https://awesome-table.com/AwesomeTableInclude.js"></script>
 
 </body>
 </html>
