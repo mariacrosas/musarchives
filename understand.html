@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Mapping archives</title>
+<meta name='music archives' content='music, archives, museum, genres' />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script type="text/javascript" src="d3.vs.min-js"></script>
+<style>
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.row.content {height: 600px}
+
+.sidenav {
+  padding-top: 20px;
+  background-color: white;
+  height: 100%;
+}
+#p {
+  width: 500px;
+  margin:0 0 0 50px;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 13px;
+  clear:both;
+}
+#p2 {
+    width: 500px;
+    font-family:helvetica, arial, sans-serif;
+    font-size:10px;
+    margin:0 0 0 50px;
+    text-align:left;
+    font-weight:normal;
+    clear:both;
+}
+#h1 {
+  margin:0 0 0 50px;
+  font-family: georgia, serif;
+  font-size: 50px;
+}
+#h2 {
+  margin:0 0 0 50px;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 30px;
+}
+#circle{
+    text-align: center;
+    float:left;
+    margin:0 50px;
+}
+/* small screens*/
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 25px;
+  }
+  .row.content {height:auto;}
+}
+
+</style>
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Archives</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="map.html">Map</a></li>
+          <li><a href="form.html">Add an archive</a></li>
+          <li><a href="understand.html">Legend</a></li>
+          <li><a href="aboutus.html">About the project</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br/>
+  <br/>
+    <h2 id='h2'>Archives - Nodes</h2>
+    <br/>
+
+    <p id='p'>
+    Each node represents an archive or museum coloured by categories and grouped by countries.
+    These four categories (explained below) establish links between archives from several countries.
+  </p>
+  <br/>
+  <svg id='circle' width="20" height="20">
+  <circle cx="10" cy="10" r="10" fill="#C8A2C8" /></svg>
+<p id='p'><b>Country</b></p>
+<br/>
+
+<svg id='circle' width="20" height="20">
+  <circle cx="10" cy="10" r="10" fill="#9CB071" /></svg>
+<p id='p'><b>Physical – “authorised”</b></p>
+<p id='p2'>  In terms of the physical collections housed in physical locations, some of these collections could be classed as ‘authorised’ collections (as per the typology put forward by Roberts and Cohen 2013), housed in purpose built or adapted buildings, staffed through a paid workforce and with multiple income streams that aid revenue generation. Examples here might be the National Film and Sound Archive, Canberra, Australia or Beeld en Geluid (National Institute for Sound and Vision), Hilversum, Netherlands.
+</p>
+<br/>
+
+<svg id='circle' width="20" height="20">
+  <circle cx="10" cy="10" r="10" fill="#FFF8DC" /></svg>
+<p id='p'><b>Physical – “do-it-yourself”</b></p>
+<p id='p2'>
+Others might be classed as DIY, or do-it-yourself, collections, housed in physical locations that are often ‘make do and mend’ buildings which are run by volunteers. Such archives are often in a continual struggle for sustainability whether that be for financial, spatial or human resources. Examples of this type include places in Sarah’s current research such as the Museum RockArt, Netherlands, and Sound Preservation Association, Tasmania, Australia.
+</p>
+<br/>
+
+<svg id='circle' width="20" height="20">
+  <circle cx="10" cy="10" r="10" fill="skyblue" /></svg>
+<p id='p'><b>Online – “institutional”</b></p>
+<p id='p2'>
+  With the digital and online collections we are entering into our database, we have Institutional collections and archive holdings that organisations are seeking to digitise in order to make them more accessible to their users and also to attract new audiences. Issues here surround funding, copyright and the purpose of digitisation. Examples of this practice include the 'British Music Collection' of Sound and Music and the English Folk Dance and Song Society‘s extensive collection.
+</p>
+<br/>
+
+<svg id='circle' width="20" height="20">
+  <circle cx="10" cy="10" r="10" fill="#EDDA74" /></svg>
+<p id='p'><b>Online – “community”</b></p>
+<p id='p2'>
+We then have community archives, driven by activist archivists who seek to preserve popular music culture. These are often ad-hoc and either seek to digitise and make available material they collect or come across, or they deal only in digital items. They are also often characterised by issues of sustainability through lack of finance and human resources and issues of ownership and copyright. As examples, we would include Jez’s own Birmingham Music Archive and also the Tanzania Heritage Project.
+</p>
+
+
+
+
+</body>
+</html>
