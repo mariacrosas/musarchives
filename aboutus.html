@@ -9,79 +9,80 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <style>
-.navbar {
-  margin-bottom: 0;
-  border-radius: 0;
-}
-.sidenav {
-  padding-top: 20px;
-  background-color: white;
-  height: 100%;
-}
-/* small screens*/
-@media screen and (max-width: 767px) {
-  .sidenav {
-    height: auto;
-    padding: 15px;
-  }
-  .row.content {height:auto;}
-}
-
-  p {
-    width: 900px;
-    text-align: left;
-    margin-left: 35px;
+  h3{
+    width:600px;
+    text-align:left;
     font-family: helvetica, arial, sans-serif;
+    color: grey;
+    font-size: 16px;
+    margin:auto;
+    position: relative;
   }
-  h1 {
-    width: 900px;
-    text-align: left;
-    margin-left: 35px;
+  #li{
+    width:600px;
+    text-align:left;
+    font-family: helvetica, arial, sans-serif;
+    color: black;
+    font-size: 13px;
+    margin:auto;
+    position: relative;
+  }
+  #cover{
+    width:600px;
+    text-align:left;
+    font-family: helvetica, arial, sans-serif;
+    color: black;
+    font-size: 13px;
+    margin:auto;
+    position: relative;
+  }
+  #headline{
+    font-family: times;
+    font-size: 40px;
     font-weight: bolder;
-    font-family: helvetica, arial, sans-serif;
+    color:black;
+    text-align:center;
   }
-  h3 {
-    width: 900px;
-    text-align: left;
-    margin-left: 35px;
-    font-family: helvetica, arial, sans-serif;
-    font-weight: bolder;
-  }
-</style>
-</head>
-<body>
 
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html">Mapping Music Museums & Archives</a>
+  #missions{
+    font-size: 12px;
+    color:grey;
+    text-align:left;
+    width:600px;
+    position: relative;
+    margin:auto;
+  }
+  </style>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Mapping Music Museums & Archives</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="nodesviz.html">Archives network</a></li>
+            <li><a href="form.html">Add an archive</a></li>
+            <li><a href="aboutus.html">About the project</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li><a href="nodesviz.html">Archives network</a></li>
-          <li><a href="form.html">Add an archive</a></li>
-          <li><a href="aboutus.html">About the project</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <br/>
-  <h1>Mapping the world’s music museums and archives</h1>
-  <p>
-    Welcome to the Mapping Music Museums Archives (MMMA) project.
-    The MMMA consists of a group of academics, music historians, citizen archivists
-    and data visualisation practitioners who are attempting, with your help, to map
-    all the music museums and archives across the world. We are then turning this
-    information into a series of beautiful data visualisations.
+    </nav>
+    <br/>
+  <div id="section1" class="container-fluid">
+  <h1 id="headline">Mapping Music Museums & Archives</h1>
+  <br><br>
+  <p id="cover"> Welcome to the <b>Mapping Music Museums Archives</b> (MMMA) project. The MMMA consists of a group of academics, music historians, citizen archivists and data visualisation practitioners who are attempting, with your help, to map all the music museums and archives across the world.
+    We are then turning this information into a series of beautiful data visualisations.
   </p>
-
+  <br><br>
     <h3>Why are we doing this?</h3>
-    <p>
+    <p id="cover">
     Through our work as academics and music archivists we’ve been interested for
     quite some time in how people and communities across the world collect,
     preserve, share and celebrate their music heritage. This is done in many different
@@ -90,21 +91,23 @@
     <br/>
     Our aim is to visualize all the amazing types of music museums and archives that
     exist and to continually add to the collection. In doing this we believe it will be:
+    <br><br>
     <ul>
-    <li>A valuable resource for academics and researchers who are interested in
+    <li id='li'>A valuable resource for academics and researchers who are interested in
     music history and cultural heritage </li>
 
-    <li>It will enable music museums and archives to better connect with each
+    <li id='li'>It will enable music museums and archives to better connect with each
     other by highlighting other similar types of practices</li>
 
-    <li>It will be of use for those with an interest in music history in general, and
+    <li id='li'>It will be of use for those with an interest in music history in general, and
     for music tourists (find the places to visit on your next trip!)</li>
     </ul>
     </p>
+    <br><br>
 
     <h3>What is this site for?</h3>
 
-    <p>
+    <p id="cover">
     As well as presenting our findings by traditional academic means (in journal
     articles, at conferences and so on), we want to disseminate our research in more
     publicly accessible formats. So we’ve taken all the data we’ve collected so far and
@@ -113,25 +116,33 @@
     <br/>
     It is our intention to open the site up so anyone can add their own, or others they
     know or use, museums and archives so this site will continually grow and evolve
-    and become more representative of music and its heritage.</p>
-    
+    and become more representative of music and its heritage.
+    </p>
+    <br><br>
+
     <h3>How do I get involved?</h3>
 
-    <p>We’ve devised some descriptors to help categorise the museums and archives we
+    <p id="cover">
+    We’ve devised some descriptors to help categorise the museums and archives we
     are mapping and what the nodes and colours represent. You can see this below.
-    <br/>
     To add your own examples of music museums and archives simply submit the Google Form on <thead>
-    'Add an archive' tab and we will review the content and add it into the visualisation.</p>
-
-    <p>
-    We are also promoting the project through social media platforms such as Twitter (link),
-    Facebook (link), so please provide us with Flickr (link), Pintrest (link) and Tumblr groups and pages that are also being used as
+    'Add an archive' tab and we will review the content and add it into the visualisation.
+    </p>
+    <br>
+    <p id="cover">
+    Please provide us with Flickr, Pintrestand Tumblr groups and pages that are being used as
     ‘unintentional’ archives (they should be listed under Online – Community).
     </p>
-
+    <br>
+    <p id="missions">Twitter (link)</p><br>
+    <p id="missions">Facebook (link)</p><br>
+    <br><br><br>
     <h3>How do I contact you?</h3>
-    <p>
+    <p id="missions">
     Get in touch at jez.collins AT bcu.ac.uk
     </p>
+  <br><br>
+</div>
+
 </body>
 </html>
