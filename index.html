@@ -6,8 +6,9 @@
 <meta name='music archives' content='music, archives, museum, genres' />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script type="text/javascript" src="d3.vs.min-js"></script>
+<script src="vis/dist/vis.js"></script>
 <style>
 .navbar {
   margin-bottom: 0;
@@ -21,41 +22,26 @@
   background-color: white;
   height: 100%;
 }
+body { margin:0; padding:0; }
 
-#p {
-  width: 70%;
-  margin:0 0 0 50px;
-  font-family: helvetica, arial, sans-serif;
-  font-size: 12px;
-  clear:both;
-}
-
-#h1 {
-  margin:0 0 0 50px;
-  font-family: georgia, serif;
-  font-size: 40px;
-}
-#h2 {
-  margin:0 0 0 50px;
-  font-family: helvetica, arial, sans-serif;
-  font-size: 25px;
-}
-
-
-table {
-    font-family: arial, sans-serif;
-    font-size: 12px;
-    border-collapse: collapse;
+  #p {
     width: 70%;
     margin:0 0 0 50px;
-}
+    font-family: helvetica, arial, sans-serif;
+    font-size: 12px;
+    clear:both;
+  }
 
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
+  #h1 {
+    margin:0 0 0 50px;
+    font-family: georgia, serif;
+    font-size: 40px;
+  }
 
+#table{
+  height:200px;
+  margin-top: 20px;
+}
 /* small screens*/
 @media screen and (max-width: 767px) {
   .sidenav {
@@ -77,59 +63,58 @@ td, th {
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">NameProject</a>
+        <a class="navbar-brand" href="index.html">MMMA</a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <li><a href="nodesviz.html">Archives network</a></li>
-          <li><a href="map.html">Search on the map</a></li>
           <li><a href="form.html">Add an archive</a></li>
+          <li><a href="aboutus.html">About the project</a></li>
         </ul>
       </div>
     </div>
   </nav>
   <br/>
-  <h1 id='h1'>Name project</h1>
+  <div class="container">
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">How to use this site?</button>
+
+    <div class="modal fade" id="myModal"role="dialog">
+      <div class="modal-dialog">
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="h1">Legend</h4>
+          </div>
+          <div class="modal-body">
+            <p>You can use this site to search and find out about <b>music museums and archives </b>that are of interest to you using keywords or specific phrases.This maybe by:</p>
+            <ul>
+              <li>Place – country or city</li>
+              <li>Genre of music – jazz or hip-hop</li>
+              <li>Sites you can go and visit - British Music Experience or South Australian Jazz Archive</li>
+              <li>Platform – online sites or social media pages</li>
+            </ul>
+          <p>You can also <b>‘drill down’</b> into the data. So if you wanted to find say, all the jazz
+            museums in the United States and then all the jazz museums you can physically
+            visit in the United States, and then all the jazz museums you can visit in New
+            Orleans you will be able search and retrieve this information.
+          </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
   <br/>
-  <p id='p'>
-    Lorem ipsum dolor sit amet, reque percipit pro id, vis nihil nominavi posidonium id. Probo clita id vel, eam ad probatus deseruisse. Nam habemus nusquam ad, et omnes soluta placerat vel, in albucius appetere sensibus nec. Fugit mundi saepe cu pro.
-    Recteque posidonium cum in, eos facilis fuisset pertinacia ex, an paulo sanctus repudiandae vis. Sint aperiam duo ex. Sed praesent omittantur ei, ut ocurreret complectitur usu. Quo quod tantas at, at nec graecis elaboraret. Augue option alterum ei sed, ei has facete gubergren complectitur. Duo ad dicunt vidisse, at diam doming quo.
-  </p>
-  <br/>
-    <h2 id='h2'>Archives network</h2>
-    <br/>
-    <p id='p'>
-    Each node represents an archive or museum coloured by categories and grouped by countries.
-    These four categories (explained below) establish links between archives from several countries.
-  </p>
-  <br/>
-  <table>
-  <tr>
-    <th>Node</th>
-    <th>Description</th>
-    <th>Colour</th>
-  </tr>
-  <tr>
-    <td>Country</td>
-    <td></td>
-    <td bgcolor="#C8A2C8"></td>
-  </tr>
-  <td><b>Physical – “authorised”</b></td>
-  <td>‘Authorised’ collections (as per the typology put forward by Roberts and Cohen 2013): housed in purpose built or adapted buildings, staffed through a paid workforce and with multiple income streams that aid revenue generation. Examples here might be the National Film and Sound Archive, Canberra, Australia or Beeld en Geluid (National Institute for Sound and Vision), Hilversum, Netherlands.</td>
-  <td bgcolor="#86b300"></td>
-  </tr>
-  <td><b>Physical – “do-it-yourself”</b></td>
-  <td>Housed in physical locations that are often ‘make do and mend’ buildings which are run by volunteers. Such archives are often in a continual struggle for sustainability whether that be for financial, spatial or human resources. Examples of this type include the Museum RockArt, Netherlands, and Sound Preservation Association, Tasmania, Australia.</td>
-  <td bgcolor="#ffffe6"></td>
-  </tr>
-  <td><b>Online – “institutional”</b></td>
-  <td>Institutional collections and archive holdings that organisations are seeking to digitise in order to make them more accessible to their users and also to attract new audiences. Issues here surround funding, copyright and the purpose of digitisation. Examples of this practice include the 'British Music Collection' of Sound and Music and the English Folk Dance and Song Society‘s extensive collection.</td>
-  <td bgcolor="#33adff"></td>
-  </tr>
-  <td><b>Online – “community”</b></td>
-  <td>Driven by activist archivists who seek to preserve popular music culture. These are often ad-hoc and either seek to digitise and make available material they collect or come across, or they deal only in digital items. They are also often characterised by issues of sustainability through lack of finance and human resources and issues of ownership and copyright. As examples, we would include Jez’s own Birmingham Music Archive and the Tanzania Heritage Project.</td>
-  <td bgcolor="#ffff00"></td>
-  </tr>
-  </table>
+<!-- Place this tag where you want the Awesome Table Widget to render -->
+<div data-type="AwesomeTableView" data-viewID="-KO6g8VX8R5yttUc3GIz/view?m=-KO-PHHPdRLlcaf9J4lW"></div>
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script src="https://awesome-table.com/AwesomeTableInclude.js"></script>
+
 </body>
 </html>
