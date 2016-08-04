@@ -9,17 +9,18 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <style>
+
   h3{
-    width:600px;
+    width:400px;
     text-align:left;
     font-family: helvetica, arial, sans-serif;
-    color: grey;
+    color: yellow;
     font-size: 16px;
     margin:auto;
     position: relative;
   }
   #li{
-    width:600px;
+    width:400px;
     text-align:left;
     font-family: helvetica, arial, sans-serif;
     color: black;
@@ -28,11 +29,11 @@
     position: relative;
   }
   #cover{
-    width:600px;
+    width:400px;
     text-align:left;
     font-family: helvetica, arial, sans-serif;
-    color: black;
-    font-size: 13px;
+    color: white;
+    font-size: 15px;
     margin:auto;
     position: relative;
   }
@@ -44,14 +45,33 @@
     text-align:center;
   }
 
-  #missions{
-    font-size: 12px;
-    color:grey;
-    text-align:left;
-    width:600px;
-    position: relative;
-    margin:auto;
+  #figure{
+    white-space: nowrap;
+    text-align: center;
   }
+
+  .floating-box{
+    width: 500px;
+    height: 900px;
+    margin-left: 10px;
+    margin-right: 50px;
+    margin-top: 5px;
+    text-align: center;
+    position: relative;
+  }
+
+
+ body{
+   background-color: black;
+   background-position: left top;
+  background-repeat: no-repeat;
+  background-image: url(map.jpg);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+ }
   </style>
   <body>
     <nav class="navbar navbar-inverse">
@@ -69,80 +89,39 @@
              <li><a href="mapping.html">Map</a></li>
              <li><a href="nodesviz.html">Network</a></li>
             <li><a href="form.html">Add an archive</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <br/>
-  <div id="section1" class="container-fluid">
-  <h1 id="headline">Mapping Music Museums & Archives</h1>
+    <div class="floating-box" style="background-color:black;color:white;padding:20px;">
+    <figure id="figure">
+  <img src="mmma4.png" alt="mma" width="400">
+  </figure>
   <br><br>
-  <p id="cover"> Welcome to the <b>Mapping Music Museums Archives</b> (MMMA) project. The MMMA consists of a group of academics, music historians, citizen archivists and data visualisation practitioners who are attempting, with your help, to map all the music museums and archives across the world.
+    <p id="cover"> Welcome to the <b>Mapping Music Museums Archives</b> (MMMA) project. The MMMA consists of a group of academics, music historians, citizen archivists and data visualisation practitioners who are attempting, with your help, to map all the music museums and archives across the world.
     We are then turning this information into a series of beautiful data visualisations.
   </p>
   <br><br>
-    <h3>Why are we doing this?</h3>
-    <p id="cover">
-    Through our work as academics and music archivists we’ve been interested for
-    quite some time in how people and communities across the world collect,
-    preserve, share and celebrate their music heritage. This is done in many different
-    ways and via many different platforms. We are interested in where, what, how
-    and why these practices take place.
-    <br/>
-    Our aim is to visualize all the amazing types of music museums and archives that
-    exist and to continually add to the collection. In doing this we believe it will be:
-    <br><br>
-    <ul>
-    <li id='li'>A valuable resource for academics and researchers who are interested in
-    music history and cultural heritage </li>
-
-    <li id='li'>It will enable music museums and archives to better connect with each
-    other by highlighting other similar types of practices</li>
-
-    <li id='li'>It will be of use for those with an interest in music history in general, and
-    for music tourists (find the places to visit on your next trip!)</li>
-    </ul>
-    </p>
-    <br><br>
-
-    <h3>What is this site for?</h3>
-
-    <p id="cover">
-    As well as presenting our findings by traditional academic means (in journal
-    articles, at conferences and so on), we want to disseminate our research in more
-    publicly accessible formats. So we’ve taken all the data we’ve collected so far and
-    created this site with the help of Maria Crosas, a journalist and data visualization
-    expert.
-    <br/>
-    It is our intention to open the site up so anyone can add their own, or others they
-    know or use, museums and archives so this site will continually grow and evolve
-    and become more representative of music and its heritage.
-    </p>
-    <br><br>
-
-    <h3>How do I get involved?</h3>
-
-    <p id="cover">
-    We’ve devised some descriptors to help categorise the museums and archives we
-    are mapping and what the nodes and colours represent. You can see this below.
-    To add your own examples of music museums and archives simply submit the Google Form on <thead>
-    'Add an archive' tab and we will review the content and add it into the visualisation.
-    </p>
-    <br>
-    <p id="cover">
-    Please provide us with Flickr, Pintrestand Tumblr groups and pages that are being used as
-    ‘unintentional’ archives (they should be listed under Online – Community).
-    </p>
-    <br>
-    <p id="missions">Twitter (link)</p><br>
-    <p id="missions">Facebook (link)</p><br>
-    <br><br><br>
-    <h3>How do I contact you?</h3>
-    <p id="missions">
-    Get in touch at jez.collins AT bcu.ac.uk
-    </p>
+  <h3> HOW CAN I USE THIS SITE?</h3>
+  <br>
+  <p id="cover">You can use this site to search and find out about <b>music museums and archives </b>that are of interest to you using keywords or specific phrases.This maybe by:
+            <ul id="cover">
+              <li>Place – country or city</li>
+              <li>Genre of music – jazz or hip-hop</li>
+              <li>Sites you can go and visit - British Music Experience or South Australian Jazz Archive</li>
+              <li>Platform – online sites or social media pages</li>
+            </ul>
+  </p>
+  <br>
+  <p id="cover">You can also <b>‘drill down’</b> into the data. So if you wanted to find say, all the jazz
+    museums in the United States and then all the jazz museums you can physically
+    visit in the United States, and then all the jazz museums you can visit in New
+    Orleans you will be able search and retrieve this information.
+  </p>
   <br><br>
+<p id="cover"> Know more about the project on 'About Us'</p>
 </div>
-
 </body>
 </html>
