@@ -9,15 +9,18 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <style>
-
   h3{
     width:400px;
     text-align:left;
     font-family: helvetica, arial, sans-serif;
-    color: yellow;
+    color: #00BFFF;
     font-size: 16px;
     margin:auto;
     position: relative;
+  }
+  #b{
+    color: #00BFFF;
+
   }
   #li{
     width:400px;
@@ -44,12 +47,10 @@
     color:black;
     text-align:center;
   }
-
   #figure{
     white-space: nowrap;
     text-align: center;
   }
-
   .floating-box{
     width: 500px;
     height: 900px;
@@ -59,18 +60,14 @@
     text-align: center;
     position: relative;
   }
-
-
  body{
-   background-color: black;
-   background-position: left top;
+  background-position: left top;
   background-repeat: no-repeat;
-  background-image: url(map.jpg);
+  background-image: url(mapbox2.png);
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-
  }
   </style>
   <body>
@@ -95,18 +92,21 @@
       </div>
     </nav>
     <br/>
-    <div class="floating-box" style="background-color:black;color:white;padding:20px;">
+    <div class="floating-box" style="background-color:black;opacity:0.7;color:white;padding:20px;">
     <figure id="figure">
   <img src="mmma4.png" alt="mma" width="400">
   </figure>
   <br><br>
-    <p id="cover"> Welcome to the <b>Mapping Music Museums Archives</b> (MMMA) project. The MMMA consists of a group of academics, music historians, citizen archivists and data visualisation practitioners who are attempting, with your help, to map all the music museums and archives across the world.
-    We are then turning this information into a series of beautiful data visualisations.
+    <p id="cover"> Welcome to the <b id="b">Mapping Music Museums Archives</b> (MMMA) project!
+      <br>
+      <br>
+    The MMMA consists of a group of academics, music historians, citizen archivists and data visualisation practitioners who are attempting, with your help, to map all the music museums and archives across the world.
   </p>
   <br><br>
   <h3> HOW CAN I USE THIS SITE?</h3>
   <br>
-  <p id="cover">You can use this site to search and find out about <b>music museums and archives </b>that are of interest to you using keywords or specific phrases.This maybe by:
+  <p id="cover">Find out music museums and archives that are of interest to you using keywords or specific phrases.This maybe by:
+    <br><br>
             <ul id="cover">
               <li>Place – country or city</li>
               <li>Genre of music – jazz or hip-hop</li>
@@ -115,13 +115,13 @@
             </ul>
   </p>
   <br>
-  <p id="cover">You can also <b>‘drill down’</b> into the data. So if you wanted to find say, all the jazz
+  <p id="cover">You can also <b id="b">‘drill down’</b> into the data. So if you wanted to find say, all the jazz
     museums in the United States and then all the jazz museums you can physically
     visit in the United States, and then all the jazz museums you can visit in New
     Orleans you will be able search and retrieve this information.
   </p>
   <br><br>
-<p id="cover"> Know more about the project on 'About Us'</p>
+<p id="cover"> Know more about the project on <a href="aboutus.html">About Us</a></p>
 </div>
 </body>
 </html>
